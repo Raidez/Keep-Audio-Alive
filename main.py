@@ -1,18 +1,22 @@
-import os, sys
+import os
+import sys
 from pathlib import Path
 
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"  # disable import pygame message
+import pygame  # noqa: E402
 
-import pygame
 
 def resource(path: str):
-    base_path = Path(getattr(sys, '_MEIPASS', '.'))
+    base_path = Path(getattr(sys, "_MEIPASS", "."))
     return base_path / path
+
 
 print("Start silence music")
 
+music_file = "silence.ogg"
+
 pygame.mixer.init()
-pygame.mixer.music.load(resource("silence.ogg"))
+pygame.mixer.music.load(resource(music_file))
 pygame.mixer.music.play(loops=-1)
 
 clock = pygame.time.Clock()

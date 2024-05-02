@@ -22,10 +22,6 @@
    "value": "Keep Audio Alive"
   },
   {
-   "optionDest": "ascii",
-   "value": false
-  },
-  {
    "optionDest": "clean_build",
    "value": false
   },
@@ -42,10 +38,6 @@
    "value": false
   },
   {
-   "optionDest": "embed_manifest",
-   "value": true
-  },
-  {
    "optionDest": "uac_admin",
    "value": false
   },
@@ -54,11 +46,7 @@
    "value": false
   },
   {
-   "optionDest": "win_private_assemblies",
-   "value": false
-  },
-  {
-   "optionDest": "win_no_prefer_redirects",
+   "optionDest": "argv_emulation",
    "value": false
   },
   {
@@ -66,12 +54,16 @@
    "value": false
   },
   {
-   "optionDest": "argv_emulation",
-   "value": false
+   "optionDest": "datas",
+   "value": "C:/Users/alexi/Documents/Keep Audio Alive/silence.ogg;."
   },
   {
    "optionDest": "datas",
-   "value": "C:/Users/alexi/Documents/Keep Audio Alive/silence.ogg;."
+   "value": "C:/Users/alexi/Documents/Keep Audio Alive/sample.mp3;."
+  },
+  {
+   "optionDest": "python_options",
+   "value": " -O"
   }
  ],
  "nonPyinstallerOptions": {
