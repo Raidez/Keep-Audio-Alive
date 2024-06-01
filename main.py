@@ -2,11 +2,15 @@ import os
 import sys
 from pathlib import Path
 
+# change working dir to the location of this script
+os.chdir(sys.path[0])
+
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"  # disable import pygame message
 import pygame  # noqa: E402
 
 
 def resource(path: str):
+    " get resource path (Windows only) "
     base_path = Path(getattr(sys, "_MEIPASS", "."))
     return base_path / path
 
@@ -14,6 +18,7 @@ def resource(path: str):
 print("Start silence music")
 
 music_file = "silence.ogg"
+# music_file = "sample.mp3" # for testing
 
 pygame.mixer.init()
 pygame.mixer.music.load(resource(music_file))
